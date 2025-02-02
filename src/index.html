@@ -5,12 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+
+    <style>
+        @keyframes moveBg {
+            0% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: 0% 0;
+            }
+        }
+
+        .animate-bg {
+            animation: moveBg 3s ease-in-out forwards;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Nav Menu -->
-    <nav class="bg-"></nav>
+    <nav class="max-w-7xl mx-auto bg-amber-300 text-white flex justify-between items-center py-8">
+        <div class="">
+            <img src="./assets/logo.svg" alt="">
+        </div>
+        <div class="flex items-center gap-12">
+            <!-- Solution Menu -->
+            <div class="relative">
+                <!-- Dropdown Button -->
+                <button class="flex items-center text-white px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:"
+                    id="dropdownButtonAlt">
+                    Solution
+                    <!-- Arrow Button -->
+                    <div id="arrowButton"
+                        class=" text-white p-0 rounded-full focus:outline-none transition-transform duration-300">
+                        <!-- Arrow icon (using a simple character) -->
+                        <span id="arrow" class="text-2xl transform rotate-0 transition-transform duration-300"><svg
+                                class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg"
+                    id="dropdownMenuAlt">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">AnyCaaS</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">AmyBaaS</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">AnyPaas</a>
+                </div>
+            </div>
+            <h3>Services</h3>
+            <h3>About Us</h3>
+            <!-- Language Menu -->
+            <div class="relative">
+                <!-- Dropdown Button -->
+                <button class="flex items-center gap-1 text-white px-2 py-2 rounded-4xl focus:outline-none border-2"
+                    id="dropdownButton">
+                    <!-- World Icon -->
+                    <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+
+                    <h3>EN</h3>
+                    <!-- Arrow Button -->
+                    <div id="arrowButtonAlt"
+                        class=" text-white p-0 rounded-full focus:outline-none transition-transform duration-300">
+                        <!-- Arrow icon (using a simple character) -->
+                        <span id="arrowAlt" class="text-2xl transform rotate-0 transition-transform duration-300"><svg
+                                class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div class="hidden absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg"
+                    id="dropdownMenu">
+                    <a href="#"
+                        class="block px-4 py-2 mx-2 text-gray-800 border-b-1 border-gray-800/50  hover:bg-blue-100">EN
+                        (English)</a>
+                    <a href="#"
+                        class="block px-4 py-2 mx-2 text-gray-800 border-b-1 border-gray-800/50  hover:bg-blue-100">TH
+                        (Thai)</a>
+                    <a href="#"
+                        class="block px-4 py-2 mx-2 text-gray-800 border-b-1 border-gray-800/50  hover:bg-blue-100">ID
+                        (Bahasa Indonesia)</a>
+                    <a href="#"
+                        class="block px-4 py-2 mx-2 text-gray-800 border-b-1 border-gray-800/50  hover:bg-blue-100">TW
+                        (Traditional Chinese)</a>
+
+                </div>
+            </div>
+        </div>
+        <button class="flex px-4 py-4 gap-3 border-1 rounded-lg">
+            <h3>Contact Us</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+
+        </button>
+    </nav>
     <!-- Hero Section -->
+    <main
+        class="max-w-7xl mx-auto bg-amber-300 text-white w-full bg-cover bg-[url('./assets/4c4adc11b7ca6ea25c7e7cba555d8f0b06488f3f-7952x5304.avif')] bg-no-repeat animate-bg">
+        <div class="py-20 ">
+            <h1 class="text-5xl">Embrace the future of finance</h1>
+            <p>Reimagine financial services with AnyTech’s open platform, distributed banking solution that powers
+                transformation</p>
+            <button class="flex">
+                <p>Reach Out to Us</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </main>
+    <div class=""">
+    </div>
 
     <!-- Powering Section -->
 
@@ -25,6 +145,10 @@
     <!-- Legacy Section -->
 
     <!-- Footer Section -->
+
+    <!-- JavaScript -->
+    <script src=" ./script.js">
+    </script>
 </body>
 
 </html>
